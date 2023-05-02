@@ -1,0 +1,353 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: SplatoonFamily;
+    src: url();
+}
+
+@font-face {
+    font-family: "SplatoonFamily";
+    src: url("../font/Splatfont2.eot") format("embedded-opentype"),
+        url("../font/Splatfont2.woff") format("woff"),
+        url("../font/Splatfont2.woff2") format("woff2"),
+        url("../font/SplatFont2.ttf") format("truetype");
+}
+
+html {
+    background-image: url(../images/backgrounds/bg.png);
+    font-family: SplatoonFamily;
+    color: #f9f9f9;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    justify-content: center;
+}
+
+header {
+    padding: 6px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #0e0e0e;
+    width: 100%;
+}
+
+header img {
+    display: inline-block;
+    margin: 0;
+    padding-right: 30px;
+    width: 150px;
+}
+
+header h2 {
+    display: inline-block;
+    color: #ebf900;
+}
+
+header img:hover {
+    transform: rotate(4deg);
+}
+
+a {
+    text-decoration: none;
+    color: #f9f9f9;
+}
+
+span a:hover {
+    color: #5730f0 !important;
+    transform: rotate(-2deg);
+}
+
+.yourDeck {
+    width: 40%;
+    height: auto;
+    margin: 5px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #292e34;
+    color: #f9f9f9;
+    overflow-y: auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, min-content);
+}
+
+.allCards {
+    width: 60%;
+    height: auto;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #292e34;
+    color: #f9f9f9;
+    overflow-y: scroll;
+    padding: 3px;
+}
+
+.cardSlot {
+    width: 107px;
+    height: 147.3px;
+    margin: 5px;
+    border: #f9f9f9 solid 2px;
+    border-radius: 5px;
+}
+
+.card {
+    width: 104px;
+    border: transparent solid 2px;
+}
+
+.card:hover {
+    border: #ebf900 solid 2px;
+    border-radius: 5px;
+}
+
+#forms {
+    flex-basis: 100%;
+    display: flex;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    background-color: #292e34;
+    padding: 3px;
+}
+
+form {
+    width: 80%;
+    overflow: hidden;
+    margin: 5px;
+}
+
+form button,
+form input {
+    padding: 10px;
+    background-color: #5730f0;
+    border-radius: 7px;
+    border-color: #5730f0;
+    font-family: SplatoonFamily;
+    color: #f9f9f9;
+}
+
+form input::file-selector-button {
+    background-color: #ebf900;
+    border-radius: 7px;
+    border-color: #5730f0;
+    font-family: SplatoonFamily;
+    color: #000000;
+}
+
+form input::file-selector-button:hover {
+    filter: brightness(120%);
+}
+
+#nonUpload:hover {
+    filter: brightness(120%);
+}
+
+.pContent {
+    height: 60vh;
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cContent{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+}
+
+.deckBox {
+    width: 300px;
+    height: 300px;
+    background-color: #8a8a8a;
+    border-radius: 30px;
+    padding: 15px;
+    text-align: center;
+    margin: 10px;
+}
+
+.deckBox p {
+    text-align: left;
+}
+
+.deckBox button {
+    margin: 10px;
+    background-color: #5730f0;
+    border-radius: 7px;
+    border-color: #5730f0;
+    font-family: SplatoonFamily;
+    color: #f9f9f9;
+    width: 250px;
+    height: 70px;
+    font-size: 30px;
+}
+
+.deckBox button:hover {
+    background-color: #ebf900;
+    border-color: #ebf900;
+    color: #000000;
+}
+
+.browseBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+}
+
+.landingImg1 {
+    height: 600px;
+    float: left;
+}
+
+.indText {
+    font-size: 22px;
+}
+
+.selected {
+    text-decoration: #ebf900 underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+}
+
+.navigator {
+    text-decoration: #5730f0 underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+}
+
+.indToEdit {
+    padding: 10px;
+    width: 230px;
+    height: 140px;
+    background-color: #5730f0;
+    border-radius: 7px;
+    border-color: #5730f0;
+    font-family: SplatoonFamily;
+    font-size: 24px;
+    color: #f9f9f9;
+}
+
+.indToEdit:hover {
+    transform: rotate(-4deg);
+    color: #ebf900;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #292e34;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #5730f0;
+}
+
+.faq{
+    width: 90vw;
+    margin: 30px;
+}
+
+.question{
+    border-left: #5730f0 solid 5px;
+
+    padding-left: 10px;
+    margin: 20px;
+    margin-bottom: 0px;
+    text-align: left;
+    font-size: xx-large;
+    position: relative;
+}
+.question::before{
+    content: "Q. ";
+    color: #5730f0;
+}
+.answer{
+    border-left: #ebf900 solid 5px;
+
+    padding-left: 10px;
+    margin-left: 60px;
+    margin-top: 0px;
+    text-align: left;
+    font-size: x-large;
+}
+.answer::before{
+    content: "A. ";
+    color: #ebf900;
+    font-size: xx-large;   
+}
+.toggle{
+    position:absolute;
+    font-size: xx-large;
+    padding-right: 10px;
+    right: 10vw;
+    text-align: right;
+    vertical-align: middle;
+}
+.hidden::after{
+    color: #5730f0;
+    content: "+";
+}
+.shown::after{
+    color: #ebf900;
+    content: "-";
+}
+.tutorial{
+    padding: 40px;
+}
+.contents{
+    border-style: groove;
+    border-width: 4px;
+    width: fit-content;
+    border-color: #5730f0 #ebf900 #ebf900 #5730f0;
+    padding: 10px;
+}
+ol{
+    margin-left: 40px;
+}
+.section{
+    margin-left: 60px;
+    margin-bottom: 60px;
+}
+.section h2 {
+    padding-top: 85px;
+    margin-top: -85px;
+    border-bottom: solid 4px #5730f0;
+}
+.section img{
+    width: 60%;
+    margin: 5px;
+    border-style: groove;
+    border-width: 2px;
+    border-color: #5730f0 #ebf900 #ebf900 #5730f0;
+}
+.tutorial hr{
+    margin: 20px;
+    margin-top: 0px;
+    background-color: #ebf900;
+    height: 4px;
+    width: 100vh;
+    border-color: #ebf900;
+}
